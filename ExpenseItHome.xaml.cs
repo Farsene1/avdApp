@@ -48,7 +48,7 @@ namespace WpfApp3
 
             // But how do we read something out of our table ?
             // First lets build a SQL-Query again:
-            sqlite_cmd.CommandText = "SELECT * FROM test";
+            sqlite_cmd.CommandText = "SELECT * FROM items";
 
             // Now the SQLiteCommand object can give us a DataReader-Object:
             sqlite_datareader = sqlite_cmd.ExecuteReader();
@@ -57,7 +57,7 @@ namespace WpfApp3
             while (sqlite_datareader.Read()) // Read() returns true if there is still a result line to read
             {
                 // Print out the content of the text field:
-                System.Console.WriteLine(sqlite_datareader["text"]);
+                System.Console.WriteLine(sqlite_datareader["name"]);
             }
 
             // We are ready, now lets cleanup and close our connection:
