@@ -75,6 +75,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DbConnector.cs" />
     <Compile Include="ExpenseItHome.xaml.cs">
       <DependentUpon>ExpenseItHome.xaml</DependentUpon>
     </Compile>
