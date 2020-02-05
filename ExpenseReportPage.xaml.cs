@@ -30,6 +30,20 @@ namespace WpfApp3
         {
             // Bind to expense report data.
             this.DataContext = data;
+            
+            //FOR TESTING PURPOSES
+            /*Console.WriteLine("TRYING TO READ FILE");
+            Item item1 = new Item("item1", "companyname1", 1, new DateTime(2008,6,1));
+            Item item2 = new Item("item2", "companyname2", 2, new DateTime(2020, 12, 2));
+            SaveXml.Append("test.xml", item1);
+            SaveXml.Append("test.xml", item2);
+            Console.WriteLine("WRITTEN TO FILE");
+            List<Item> items = SaveXml.getAllItems("test.xml");
+            Console.WriteLine("No. of Items is " + items.Count);
+            for(int i = 0; i < items.Count; i++)
+            {
+                Console.WriteLine(items[i]);
+            } */
         }
     }
 }

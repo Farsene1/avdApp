@@ -1,0 +1,17 @@
+<Person Name="Flo1" Department="Legal1">
+	<Expense ExpenseType="Lunch" ExpenseAmount="50" />
+        <Expense ExpenseType="Transportation" ExpenseAmount="50" />
+</Person>
+<Person Name="Flo2" Department="Legal2">
+	<Expense ExpenseType="Lunch" ExpenseAmount="50" />
+        <Expense ExpenseType="Transportation" ExpenseAmount="50" />
+</Person>
+<Person Name="Flo3" Department="Legal3">
+	<Expense ExpenseType="Lunch" ExpenseAmount="50" />
+        <Expense ExpenseType="Transportation" ExpenseAmount="50" />
+</Person>
+<Person Name="Flo4" Department="Legal4">
+	<Expense ExpenseType="Lunch" ExpenseAmount="50" />
+        <Expense ExpenseType="Transportation" ExpenseAmount="50" />
+</Person>
+                        

@@ -1,0 +1,49 @@
+﻿<Page x:Class="WpfApp3.AddItem"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="500"
+      Title="AddItem">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="watermark.png" />
+        </Grid.Background>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,10,0,0" Name="LoginHeading" Text="Add an item" VerticalAlignment="Top" FontSize="17" FontStretch="ExtraCondensed"/>
+        <TextBlock Height="45" HorizontalAlignment="Left" Margin="19,38,0,0" Name="textBlockHeading" VerticalAlignment="Top" FontSize="12" FontStyle="Italic" Padding="5" Width="442">  
+            Factory No = Nr de fabricatie, Deadline = scadenta
+            <LineBreak/>Factory date = and de fabricare
+         
+            Type = in functiune sau in conservare
+
+        </TextBlock>
+
+        <!--MAIN INFO-->
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="19,103,0,0" Name="textBlock1" Text="Item name" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.077,0.113" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="19,148,0,0" Name="textBlock2" Text="Company name" VerticalAlignment="Top" Width="83" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="19,187,0,0" x:Name="textBlock2_Copy" Text="Factory No" VerticalAlignment="Top" Width="83" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="19,228,0,0" x:Name="textBlock2_Copy1" Text="Deadline" VerticalAlignment="Top" Width="83" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="109,103,0,0" Name="textBoxItemName" VerticalAlignment="Top" Width="113" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="109,148,0,0" Name="textBoxCompanyName" VerticalAlignment="Top" Width="113" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="109,187,0,0" x:Name="textBoxFactoryNo" VerticalAlignment="Top" Width="113" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="109,226,0,0" Name="deadLinePicker" VerticalAlignment="Top" Width="113" SelectedDate="8/10/09" SelectedDateFormat="Long"/>
+        
+        <!--Additional info-->
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="270,103,0,0" x:Name="textBlock1_Copy" Text="Factory Date" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.077,0.113" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="270,148,0,0" x:Name="textBlock1_Copy1" Text="Iscir no." VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.077,0.113" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="270,187,0,0" x:Name="textBlock1_Copy2" Text="Parameters" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.077,0.113" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="270,228,0,0" x:Name="textBlock1_Copy3" Text="Type" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.077,0.113" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="270,269,0,0" x:Name="textBlock1_Copy4" Text="Observations" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.077,0.113" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="365,101,0,0" x:Name="datePicker1_Copy" VerticalAlignment="Top" Width="113" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="365,148,0,0" x:Name="textBoxEmail_Copy1" VerticalAlignment="Top" Width="113" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="365,187,0,0" x:Name="textBoxEmail_Copy2" VerticalAlignment="Top" Width="113" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="365,228,0,0" x:Name="textBoxEmail_Copy3" VerticalAlignment="Top" Width="113" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="365,267,0,0" x:Name="textBoxEmail_Copy4" VerticalAlignment="Top" Width="113" />
+
+        <Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="69,282,0,0" Name="button1" VerticalAlignment="Top" Width="104" Click="Save_Item_Click" />
+        
+    </Grid>
+</Page>
