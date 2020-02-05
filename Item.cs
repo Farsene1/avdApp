@@ -27,6 +27,13 @@ namespace WpfApp3
             this.Deadline = Deadline;
         }
 
+        public Item(string itemName, string companyName, int factoryNo, DateTime? selectedDate)
+        {
+            ItemName = itemName;
+            CompanyName = companyName;
+            FactoryNo = factoryNo;
+        }
+
         public void SetInfo(Info info)
         {
             this.Info = info;

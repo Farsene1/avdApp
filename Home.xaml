@@ -1,12 +1,12 @@
-﻿<Page x:Class="WpfApp3.ExpenseItHome"
+﻿<Page x:Class="WpfApp3.Home"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp3"
       mc:Ignorable="d" 
-      d:DesignHeight="350" d:DesignWidth="500"
-      Title="ExpenseItHome">
+      d:DesignHeight="450" d:DesignWidth="500"
+      Title="Home">
 
     <Grid Margin="10,0,10,10">
         <!-- DATA RESOURCE -->
@@ -61,27 +61,33 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- People list -->
-
-        <Label Grid.Column="1" Style="{StaticResource headerTextStyle}" >
-            View Expense Report
+        <Label Style="{StaticResource headerTextStyle}" Height="32" Margin="39.6,49,36,54.2" Grid.Column="1" >
+            AVD Expert S.R.L
         </Label>
 
-        <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
-            <Label Style="{StaticResource listHeaderTextStyle}">Names</Label>
-        </Border>
+        <Button Grid.Column="1" Margin="0,9.6,56,101.4" Grid.Row="2" Click="All_Items_Click" Style="{StaticResource buttonStyle}">Items</Button>
+        <Button Grid.Column="1" Margin="0,53.6,56,57.4" Grid.Row="2" Click="Add_Item_Click" Style="{StaticResource buttonStyle}">Add item</Button>
+
+
+        <!-- People list
+
         
 
-        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" 
+        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
+            <Label Style="{StaticResource listHeaderTextStyle}">Names</Label>
+        </Border>
+
+        <ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="2" 
          ItemsSource="{Binding Source={StaticResource ExpenseDataSource}, XPath=Person}"
          ItemTemplate="{StaticResource nameItemTemplate}">
         </ListBox>
 
 
-
-        <!-- View report button -->
+        -->
+        
+        <!-- View report button 
         <Button Grid.Column="1" Grid.Row="3" Click="Button_Click" Style="{StaticResource buttonStyle}">View</Button>
-
+        -->
     </Grid>
 
 </Page>

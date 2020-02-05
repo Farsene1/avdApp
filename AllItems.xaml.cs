@@ -16,20 +16,13 @@ using System.Windows.Shapes;
 namespace WpfApp3
 {
     /// <summary>
-    /// Interaction logic for ExpenseItHome.xaml
+    /// Interaction logic for AllItems.xaml
     /// </summary>
-    public partial class ExpenseItHome : Page
+    public partial class AllItems : Page
     {
-        public ExpenseItHome()
+        public AllItems()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            // View Expense Report
-            ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.peopleListBox.SelectedItem);
-            this.NavigationService.Navigate(expenseReportPage);
         }
     }
 }

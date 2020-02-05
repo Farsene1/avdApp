@@ -11,16 +11,16 @@ namespace WpfApp3
         public DateTime FactoryDate;
         public int IscirNo;
         public String Parameters;
-        public String Working; // in functiune sau conservare
+        public String Type; // in functiune sau conservare
         public String Observations;
 
         public Info(DateTime FactoryDate, int IscirNo, String Parameters,
-             String Working, String Observations)
+             String Type, String Observations)
         {
             this.FactoryDate = FactoryDate;
             this.IscirNo = IscirNo;
             this.Parameters = Parameters;
-            this.Working = Working;
+            this.Type = Type;
             this.Observations = Observations;
         }
     }
