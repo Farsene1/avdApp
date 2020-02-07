@@ -41,4 +41,3 @@ C:\Users\arsen\source\repos\avdApp\obj\Debug\Home.g.cs
 C:\Users\arsen\source\repos\avdApp\obj\Debug\Home.baml
 C:\Users\arsen\source\repos\avdApp\obj\Debug\Deadlines.g.cs
 C:\Users\arsen\source\repos\avdApp\obj\Debug\Deadlines.baml
-C:\Users\arsen\source\repos\avdApp\obj\Debug\WpfApp3.csprojAssemblyReference.cache

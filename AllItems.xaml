@@ -12,22 +12,28 @@
         <Grid.Background>
             <ImageBrush ImageSource="watermark.png" />
         </Grid.Background>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="500"/>
             <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="0" Height="400" Width="880" HorizontalAlignment="Left" Margin="58,49,0,0"   
+        <DataGrid Grid.Row="0" Height="400" Width="980" HorizontalAlignment="Left" Margin="10,49,0,0"   
             Name="DataGridAll" VerticalAlignment="Top" RowHeight="30" ColumnWidth="100"
-                  Background="LightGray" RowBackground="LightYellow" AlternatingRowBackground="LightBlue" IsReadOnly="False" AutoGenerateColumns="False">
+                  Background="LightGray" RowBackground="LightYellow" AlternatingRowBackground="LightBlue" IsReadOnly="False" AutoGenerateColumns="False" CanUserDeleteRows="True">
             <DataGrid.Columns>
-                <DataGridTextColumn  Header="Item Name" Width="100" Binding="{Binding ItemName, UpdateSourceTrigger=LostFocus}"></DataGridTextColumn>
-                <DataGridTextColumn  Header="Company Name" Width="100" Binding="{Binding CompanyName, UpdateSourceTrigger=LostFocus}"></DataGridTextColumn>
-                <DataGridTextColumn  Header="Factory no." Width="100" Binding="{Binding FactoryNo, UpdateSourceTrigger=LostFocus}"></DataGridTextColumn>
-                <DataGridTextColumn  Header="Deadline" Width="100" Binding="{Binding Deadline, UpdateSourceTrigger=LostFocus}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Item Name" Width="100" Binding="{Binding ItemName, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Company Name" Width="120" Binding="{Binding CompanyName, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Factory no." Width="100" Binding="{Binding FactoryNo, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Deadline" Width="100" Binding="{Binding Deadline, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Factory Date" Width="100" Binding="{Binding FactoryDate, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Iscir No." Width="100" Binding="{Binding IscirNo, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Parameters" Width="100" Binding="{Binding Parameters, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="In functiune/In conservare" Width="150" Binding="{Binding Type, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Observations" Width="100" Binding="{Binding Observations, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <Button Grid.Row ="1" Height="40" Width ="250" Margin="338,64,412,96" Click="Save_Click">SAVE</Button>
+        <Button Grid.Row ="1" Height="40" Margin="83,64,776,96" Click="Delete_Click" Content="Delete"/>
     </Grid>
 </Page>

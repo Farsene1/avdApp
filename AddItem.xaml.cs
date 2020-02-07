@@ -28,17 +28,30 @@ namespace WpfApp3
 
         private void Save_Item_Click(object sender, RoutedEventArgs e)
         {
-            String ItemName = textBoxItemName.Text;
-            String CompanyName = textBoxCompanyName.Text;
-            int FactoryNo = Int32.Parse(textBoxFactoryNo.Text);
-            String dateVal = deadLinePicker.SelectedDate.Value.ToString("dd/MM/yyyy");
-            DateTime dateTime = DateTime.ParseExact(dateVal, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            string ItemName = textBoxItemName.Text;
+            string CompanyName = textBoxCompanyName.Text;
+            string FactoryNo = textBoxFactoryNo.Text;
+            string dateVal = deadLinePicker.SelectedDate.Value.ToString("dd/MM/yyyy");
+            DateTime deadline = DateTime.ParseExact(dateVal, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+            string dateVal2 = factoryDatePicker.SelectedDate.Value.ToString("dd/MM/yyyy");
+            DateTime FactoryDate = DateTime.ParseExact(dateVal2, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            string IscirNo = textBoxIscirNo.Text;
+            string Parameters = textBoxParameters.Text;
+            string Type = textBoxType.Text;
+            string Observations = textBoxObservations.Text; 
 
             textBoxItemName.Clear();
             textBoxCompanyName.Clear();
             textBoxFactoryNo.Clear();
+            //info boxes
+            textBoxIscirNo.Clear();
+            textBoxParameters.Clear();
+            textBoxType.Clear();
+            textBoxObservations.Clear();
 
-            Item item = new Item(ItemName, CompanyName, FactoryNo, dateTime);
+            Item item = new Item(ItemName, CompanyName, FactoryNo, deadline, FactoryDate, IscirNo, Parameters, Type, Observations);
+
             SaveXml.Append("test.xml", item);
             //Console.WriteLine(dateVal);
         }

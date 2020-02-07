@@ -15,7 +15,9 @@ namespace WpfApp3
         public AllItems()
         {
             InitializeComponent();
-            List<Item> all = SaveXml.GetAllItems("test.xml");
+            List<Item> all = new List<Item>();
+            all = SaveXml.GetAllItems("test.xml");
+
             items = new ObservableCollection<Item>(all);
 
             DataGridAll.ItemsSource = items;
@@ -30,12 +32,22 @@ namespace WpfApp3
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("DATA UPDATED ############################");
-            for (int i = 1; i < items.Count; i++)
-            {
-                Console.WriteLine(items[i]);
-                SaveXml.Update("test.xml", items);
-            }
+            //Console.WriteLine("DATA UPDATED ############################");
+            //for (int i = 1; i < items.Count; i++)
+            //{
+            //Console.WriteLine(items[i]);  
+            //}
+            SaveXml.Update("test.xml", items);
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            Item row = (Item)DataGridAll.SelectedItems[0];
+
+            ObservableCollection<Item> data = (ObservableCollection<Item>)DataGridAll.ItemsSource;
+            data.Remove(row);
+
+            SaveXml.Update("test.xml", data);
         }
     }
 }

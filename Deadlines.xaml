@@ -19,6 +19,12 @@
                     <GridViewColumn Header="Company Name" Width="100" DisplayMemberBinding="{Binding CompanyName, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
                     <GridViewColumn Header="Factory No" Width="100" DisplayMemberBinding="{Binding FactoryNo, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
                     <GridViewColumn Header="Deadline" Width="100" DisplayMemberBinding="{Binding Deadline, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    
+                    <GridViewColumn Header="Factory Date" Width="100" DisplayMemberBinding="{Binding FactoryDate, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="Iscir No." Width="100" DisplayMemberBinding="{Binding IscirNo, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="Parameters" Width="100" DisplayMemberBinding="{Binding Parameters, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="In functiune/conservare" Width="150" DisplayMemberBinding="{Binding Type, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="Observatii" Width="100" DisplayMemberBinding="{Binding Observations, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>

@@ -13,21 +13,26 @@ namespace WpfApp3
 {
     class SaveXml
     {
-        public static void SaveData(String filename, Item obj)
+        public static XElement convertToXmlObject(Item obj)
         {
-            XmlSerializer sr = new XmlSerializer(obj.GetType());
-            TextWriter writer = new StreamWriter(filename);
-            sr.Serialize(writer, obj);
-            writer.Close();
-        }
-
-        public static void Append(string filename, Item obj)
-        {
-            var item = new XElement("item",
+            return new XElement("item",
+                //main parameters
                 new XElement("ItemName", obj.ItemName),
                 new XElement("CompanyName", obj.CompanyName),
                 new XElement("FactoryNo", obj.FactoryNo),
-                new XElement("Deadline", obj.Deadline));
+                new XElement("Deadline", obj.Deadline),
+                //info here
+                new XElement("FactoryDate", obj.FactoryDate),
+                new XElement("IscirNo", obj.IscirNo),
+                new XElement("Parameters", obj.Parameters),
+                new XElement("Type", obj.Type),
+                new XElement("Observations", obj.Observations)
+                );
+        }
+        
+        public static void Append(string filename, Item obj)
+        {
+            var item = convertToXmlObject(obj);
 
             var doc = new XDocument();
 
@@ -50,14 +55,8 @@ namespace WpfApp3
             {
                 Item obj = items[i];
 
-                var item = new XElement("item",
-                new XElement("ItemName", obj.ItemName),
-                new XElement("CompanyName", obj.CompanyName),
-                new XElement("FactoryNo", obj.FactoryNo),
-                new XElement("Deadline", obj.Deadline)
+                var item = convertToXmlObject(obj);
                 
-                );
-
                 doc.Element("items").Add(item);
             }
             doc.Save(filename);
@@ -79,8 +78,14 @@ namespace WpfApp3
                 {
                     ItemName = d.Element("ItemName").Value,
                     CompanyName = d.Element("CompanyName").Value,
-                    FactoryNo = Int32.Parse(d.Element("FactoryNo").Value),
-                    Deadline = DateTime.Parse(d.Element("Deadline").Value)
+                    FactoryNo = d.Element("FactoryNo").Value,
+                    Deadline = DateTime.Parse(d.Element("Deadline").Value),
+                    //info here
+                    FactoryDate = DateTime.Parse(d.Element("FactoryDate").Value),
+                    IscirNo = d.Element("IscirNo").Value,
+                    Parameters = d.Element("Parameters").Value,
+                    Type = d.Element("Type").Value,
+                    Observations = d.Element("Observations").Value
                 }).ToList();
             }
 
@@ -106,8 +111,14 @@ namespace WpfApp3
                 {
                     ItemName = d.Element("ItemName").Value,
                     CompanyName = d.Element("CompanyName").Value,
-                    FactoryNo = Int32.Parse(d.Element("FactoryNo").Value),
-                    Deadline = DateTime.Parse(d.Element("Deadline").Value)
+                    FactoryNo = d.Element("FactoryNo").Value,
+                    Deadline = DateTime.Parse(d.Element("Deadline").Value),
+                    //info here
+                    FactoryDate = DateTime.Parse(d.Element("FactoryDate").Value),
+                    IscirNo = d.Element("IscirNo").Value,
+                    Parameters = d.Element("Parameters").Value,
+                    Type = d.Element("Type").Value,
+                    Observations = d.Element("Observations").Value
                 }).ToList();
             }
 
