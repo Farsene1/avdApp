@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp3"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="500"
+      d:DesignHeight="700" d:DesignWidth="1000"
       Title="AddItem">
 
     <Grid>
@@ -29,7 +29,7 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="109,103,0,0" Name="textBoxItemName" VerticalAlignment="Top" Width="113" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="109,148,0,0" Name="textBoxCompanyName" VerticalAlignment="Top" Width="113" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="109,187,0,0" x:Name="textBoxFactoryNo" VerticalAlignment="Top" Width="113" />
-        <DatePicker Height="25" HorizontalAlignment="Left" Margin="109,226,0,0" Name="deadLinePicker" VerticalAlignment="Top" Width="113" SelectedDate="8/10/09" SelectedDateFormat="Long"/>
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="109,226,0,0" Name="deadLinePicker" VerticalAlignment="Top" Width="113" />
         
         <!--Additional info-->
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="270,103,0,0" x:Name="textBlock1_Copy" Text="Factory Date" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.077,0.113" />
@@ -37,11 +37,11 @@
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="270,187,0,0" x:Name="textBlock1_Copy2" Text="Parameters" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.077,0.113" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="270,228,0,0" x:Name="textBlock1_Copy3" Text="Type" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.077,0.113" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="270,269,0,0" x:Name="textBlock1_Copy4" Text="Observations" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.077,0.113" />
-        <DatePicker Height="25" HorizontalAlignment="Left" Margin="365,101,0,0" x:Name="datePicker1_Copy" VerticalAlignment="Top" Width="113" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="365,148,0,0" x:Name="textBoxEmail_Copy1" VerticalAlignment="Top" Width="113" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="365,187,0,0" x:Name="textBoxEmail_Copy2" VerticalAlignment="Top" Width="113" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="365,228,0,0" x:Name="textBoxEmail_Copy3" VerticalAlignment="Top" Width="113" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="365,267,0,0" x:Name="textBoxEmail_Copy4" VerticalAlignment="Top" Width="113" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="365,101,0,0" x:Name="factoryDatePicker" VerticalAlignment="Top" Width="113" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="365,148,0,0" x:Name="textBoxIscirNo" VerticalAlignment="Top" Width="113" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="365,187,0,0" x:Name="textBoxParameters" VerticalAlignment="Top" Width="113" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="365,228,0,0" x:Name="textBoxType" VerticalAlignment="Top" Width="113" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="365,267,0,0" x:Name="textBoxObservations" VerticalAlignment="Top" Width="113" />
 
         <Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="69,282,0,0" Name="button1" VerticalAlignment="Top" Width="104" Click="Save_Item_Click" />
         
