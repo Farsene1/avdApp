@@ -36,5 +36,11 @@ namespace WpfApp3
             AddItem addItem = new AddItem();
             this.NavigationService.Navigate(addItem);
         }
+
+        private void Deadlines_Click(object sender, RoutedEventArgs e)
+        {
+            Deadlines deadlines = new Deadlines();
+            this.NavigationService.Navigate(deadlines);
+        }
     }
 }

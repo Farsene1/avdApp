@@ -1,0 +1,26 @@
+﻿<Page x:Class="WpfApp3.Deadlines"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="Page1">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="watermark.png" />
+        </Grid.Background>
+        <ListView Name="ListViewAll" Margin="24,57,38,50.6">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Item Name" Width="100" DisplayMemberBinding="{Binding ItemName, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="Company Name" Width="100" DisplayMemberBinding="{Binding CompanyName, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="Factory No" Width="100" DisplayMemberBinding="{Binding FactoryNo, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="Deadline" Width="100" DisplayMemberBinding="{Binding Deadline, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp3"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="500"
+      d:DesignHeight="700" d:DesignWidth="1000"
       Title="AddItem">
 
     <Grid>
@@ -29,7 +29,7 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="109,103,0,0" Name="textBoxItemName" VerticalAlignment="Top" Width="113" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="109,148,0,0" Name="textBoxCompanyName" VerticalAlignment="Top" Width="113" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="109,187,0,0" x:Name="textBoxFactoryNo" VerticalAlignment="Top" Width="113" />
-        <DatePicker Height="25" HorizontalAlignment="Left" Margin="109,226,0,0" Name="deadLinePicker" VerticalAlignment="Top" Width="113" SelectedDate="8/10/09" SelectedDateFormat="Long"/>
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="109,226,0,0" Name="deadLinePicker" VerticalAlignment="Top" Width="113" />
         
         <!--Additional info-->
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="270,103,0,0" x:Name="textBlock1_Copy" Text="Factory Date" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.077,0.113" />

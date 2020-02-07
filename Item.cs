@@ -8,11 +8,11 @@ namespace WpfApp3
 {
     class Item
     {
-        public string ItemName;
-        public int FactoryNo;
-        public string CompanyName;
-        public DateTime Deadline;
-        public Info Info;
+        public string ItemName { get; set; }
+        public int FactoryNo { get; set; }
+        public string CompanyName { get; set; }
+        public DateTime Deadline { get; set; } 
+        public Info Info { get; set; }
 
         public Item()
         {
