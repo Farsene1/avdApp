@@ -42,5 +42,11 @@ namespace WpfApp3
             Deadlines deadlines = new Deadlines();
             this.NavigationService.Navigate(deadlines);
         }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            AdvancedSearchTool tool = new AdvancedSearchTool();
+            this.NavigationService.Navigate(tool);
+        }
     }
 }

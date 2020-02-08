@@ -1,0 +1,38 @@
+﻿<Page x:Class="WpfApp3.AdvancedSearchTool"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="AdvancedSearchTool">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="watermark.png"  />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="600"/>
+        </Grid.RowDefinitions>
+        <Button Margin="223,36,713,36" Click="Search_Click">Search</Button>
+        <TextBox Grid.Row="0" Name="textBox" Margin="42,35,782,36" />
+        <ListView Grid.Row="1"  Name="ListViewFiltered" Margin="10,41,10,149">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Item Name" Width="100" DisplayMemberBinding="{Binding ItemName, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="Company Name" Width="100" DisplayMemberBinding="{Binding CompanyName, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="Factory No" Width="100" DisplayMemberBinding="{Binding FactoryNo, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="Deadline" Width="100" DisplayMemberBinding="{Binding Deadline, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+
+                    <GridViewColumn Header="Factory Date" Width="100" DisplayMemberBinding="{Binding FactoryDate, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="Iscir No." Width="100" DisplayMemberBinding="{Binding IscirNo, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="Parameters" Width="100" DisplayMemberBinding="{Binding Parameters, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="In functiune/conservare" Width="150" DisplayMemberBinding="{Binding Type, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                    <GridViewColumn Header="Observatii" Width="100" DisplayMemberBinding="{Binding Observations, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

@@ -33,6 +33,7 @@
         <Button Grid.Column="1" Margin="0,91.2,-397.8,23" Grid.Row="2" Click="Add_Item_Click" Style="{StaticResource buttonStyle}">Add item</Button>
 
         <Button Grid.Column="1" Grid.Row="3"  Style="{StaticResource buttonStyle}" Click="Deadlines_Click" Margin="0,64.2,-397.8,135.6" >Scadente</Button>
+        <Button Grid.Column="1" Grid.Row="3"  Style="{StaticResource buttonStyle}" Click="Search_Click" Margin="0,108.2,-397.8,93.2" Content="Cautare avansata" />
 
 
 
