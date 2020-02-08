@@ -18,6 +18,7 @@
         </Grid.RowDefinitions>
         <Button Margin="223,36,713,36" Click="Search_Click">Search</Button>
         <TextBox Grid.Row="0" Name="textBox" Margin="42,35,782,36" />
+        <!--
         <ListView Grid.Row="1"  Name="ListViewFiltered" Margin="10,41,10,149">
             <ListView.View>
                 <GridView>
@@ -33,6 +34,22 @@
                     <GridViewColumn Header="Observatii" Width="100" DisplayMemberBinding="{Binding Observations, UpdateSourceTrigger=LostFocus}"></GridViewColumn>
                 </GridView>
             </ListView.View>
-        </ListView>
+        </ListView> -->
+        <DataGrid Grid.Row="1" Name="ListViewFiltered" Margin="10,41,10,149" HorizontalAlignment="Left"   
+                     VerticalAlignment="Top" RowHeight="30" ColumnWidth="100"
+                  Background="LightGray" RowBackground="LightYellow" AlternatingRowBackground="LightBlue" IsReadOnly="True" AutoGenerateColumns="False" CanUserDeleteRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn  Header="Item Name" Width="100" Binding="{Binding ItemName, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Company Name" Width="120" Binding="{Binding CompanyName, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Factory no." Width="100" Binding="{Binding FactoryNo, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Deadline" Width="100" Binding="{Binding Deadline, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Factory Date" Width="100" Binding="{Binding FactoryDate, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Iscir No." Width="100" Binding="{Binding IscirNo, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Parameters" Width="100" Binding="{Binding Parameters, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="In functiune/In conservare" Width="150" Binding="{Binding Type, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn  Header="Observations" Width="100" Binding="{Binding Observations, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Margin="835,36,101,36" Click="Print_Click" Content="Print"/>
     </Grid>
 </Page>

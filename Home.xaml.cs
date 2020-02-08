@@ -48,5 +48,10 @@ namespace WpfApp3
             AdvancedSearchTool tool = new AdvancedSearchTool();
             this.NavigationService.Navigate(tool);
         }
+
+        private void Contact_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("ISSUES: EMAIL arsene.florentin.ichb@gmail.com");
+        }
     }
 }
