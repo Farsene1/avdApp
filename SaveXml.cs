@@ -70,10 +70,10 @@ namespace WpfApp3
             List<Item> items = new List<Item>();
             List<Item> result = new List<Item>();
 
-            var doc = XDocument.Load(filename);
-
             if (File.Exists(filename))
             {
+                var doc = XDocument.Load(filename);
+
                 items = doc.Descendants("item").Select(d => new Item
                 {
                     ItemName = d.Element("ItemName").Value,
@@ -104,9 +104,10 @@ namespace WpfApp3
         public static List<Item> GetAllItems(string filename)
         {
             List<Item> items = new List<Item>();
-            var doc = XDocument.Load(filename);
             if (File.Exists(filename))
             {
+                var doc = XDocument.Load(filename);
+
                 items = doc.Descendants("item").Select(d => new Item
                 {
                     ItemName = d.Element("ItemName").Value,

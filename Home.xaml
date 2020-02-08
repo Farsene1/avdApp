@@ -25,16 +25,17 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Label Style="{StaticResource headerTextStyle}" Height="32" Margin="474.2,91,-397.8,100.2" Grid.Column="1" >
+        <Label Style="{StaticResource headerTextStyle}" Height="32" Margin="487.2,89,-410.8,103" Grid.Column="1" >
             AVD Expert S.R.L
         </Label>
 
-        <Button Grid.Column="1" Margin="0,34.2,-397.8,79.2" Grid.Row="2" Click="All_Items_Click" Style="{StaticResource buttonStyle}">Items</Button>
-        <Button Grid.Column="1" Margin="0,91.2,-397.8,23" Grid.Row="2" Click="Add_Item_Click" Style="{StaticResource buttonStyle}">Add item</Button>
+        <Button Grid.Column="1" Margin="0,34.2,-397.8,79.2" Grid.Row="2" Click="All_Items_Click" Style="{StaticResource buttonStyle}">Echipamente</Button>
+        <Button Grid.Column="1" Margin="0,91.2,-397.8,23" Grid.Row="2" Click="Add_Item_Click" Style="{StaticResource buttonStyle}">Adauga echipament</Button>
 
         <Button Grid.Column="1" Grid.Row="3"  Style="{StaticResource buttonStyle}" Click="Deadlines_Click" Margin="0,64.2,-397.8,135.6" >Scadente</Button>
         <Button Grid.Column="1" Grid.Row="3"  Style="{StaticResource buttonStyle}" Click="Search_Click" Margin="0,108.2,-397.8,93.2" Content="Cautare avansata" />
         <Button Grid.Column="1" Grid.Row="3"  Style="{StaticResource buttonStyle}" Click="Contact_Click" Margin="0,154.2,-397.8,48" Content="Contact dezvoltator" />
+        <Label Style="{StaticResource headerTextStyle}" Height="32" Margin="636.2,187.2,-559.8,9.6" Grid.Column="1" Content="Florentin Arsene" Grid.Row="3" />
 
 
     </Grid>

@@ -33,7 +33,7 @@
                 <DataGridTextColumn  Header="Observations" Width="100" Binding="{Binding Observations, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Grid.Row ="1" Height="40" Width ="250" Margin="381,64,369,96" Click="Save_Click">SAVE</Button>
+        <Button Grid.Row ="1" Height="40" Margin="381,64,395,96" Click="Save_Click">SAVE</Button>
         <Button Grid.Row ="1" Height="40" Margin="83,64,776,96" Click="Delete_Click" Content="Delete"/>
         <Button Grid.Row ="1" Height="40" Margin="747,64,81,96" Click="Print_Click" Content="PRINT"/>
     </Grid>
